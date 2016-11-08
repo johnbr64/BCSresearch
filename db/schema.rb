@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20161105214834) do
 
   create_table "Authors", primary_key: "Author_ID", force: :cascade, options: "ENGINE=MyISAM DEFAULT CHARSET=latin1" do |t|
     t.string "L_Name",    limit: 30
@@ -54,6 +54,9 @@ ActiveRecord::Schema.define(version: 0) do
     t.string "Zip",              limit: 10
     t.string "Phone",            limit: 12
     t.string "Publisher_NameID", limit: 35
+  end
+
+  create_table "database_structures", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
   end
 
 end
