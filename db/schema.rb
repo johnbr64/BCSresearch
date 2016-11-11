@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20161105214834) do
     t.string  "Pub_Title",      limit: 120
     t.binary  "Summary",        limit: 65535
     t.string  "VOL",            limit: 5
-    t.integer "No"
+    t.integer "No",                           default: "", null:false                          
     t.string  "Web_Address",    limit: 30
     t.string  "Author_Name",    limit: 30
     t.string  "Genre",          limit: 30

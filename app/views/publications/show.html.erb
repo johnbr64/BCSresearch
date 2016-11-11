@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<h1><c>Publication</c></h1>
+
+<b>ID: </b><%=@publication.id%>&nbsp;&nbsp;<b>Title: </b><%=@publication.Pub_Title%>&nbsp;&nbsp;<b>Author: </b><%=@publication.Author_Name%><br /><br />
+<b>Publisher: </b><%=@publication.Publisher_Name%>&nbsp;&nbsp;<b>Date </b><%=@publication.Pub_Date%>&nbsp;&nbsp;<b>Volume: </b><%=@publication.VOL%>&nbsp;&nbsp; <b>No.: </b><%=@publication.No%><br /><br />
+<b>Genre: </b><%=@publication.Genre%>&nbsp;&nbsp;<b>Web_Address: </b><%=@publication.Web_Address%>&nbsp;&nbsp;<b>Entered_By: </b><%=@publication.Entered_By%>
+<br />
+<br />
+<b><u>Summary</u></b> <br />
+<%=@publication.Summary%>
+
+
+<br /><br />
+<%= link_to 'Edit', edit_publication_path(@publication) %> |
+<%= link_to 'Back', publications_path %>

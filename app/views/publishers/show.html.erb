@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1><c>Publisher:</c></h1>
+
+<b>ID</b>
+<%=@publisher.id%><br />
+
+<b>Name:</b>
+<%=@publisher.Publisher_Name%><br />
+
+<b>Street:</b>
+<%=@publisher.Street%><br />
+
+<b>City:</b>
+<%=@publisher.City%><br />
+
+<b>State:</b>
+<%=@publisher.State%><br />
+
+<b>Zip Code:</b>
+<%=@publisher.Zip%><br />
+<br /><br />
+
+
+
+<%= link_to 'Edit', edit_publisher_path(@publisher) %> |
+<%= link_to 'Back', publishers_path %>

@@ -1,0 +1,67 @@
+<%= form_for(publication) do |f| %>
+  <% if publication.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(publication.errors.count, "error") %> prohibited this publication from being saved:</h2>
+
+      <ul>
+      <% publication.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class= "field">
+	<%=f.label :id%>
+	<%=f.text_field :id%>
+</div>
+
+<div class= "field">
+	<%=f.label :Title%>
+	<%=f.text_field :Pub_Title%>
+</div>
+
+<div class "field">
+	<%=f.label :Author%>
+	<%=f.text_field :Author_Name%>
+	
+<div class="field">
+	<%=f.label :Publisher_Name%>
+	<%=f.text_field :Publisher_Name%>
+</div>
+
+<div class= "field">
+	<%=f.label :Publication_Date%>
+	<%=f.text_field :Pub_Date%>
+</div>
+
+<div class= "field">
+	<%f.label :VOL%>
+	<%=f.text_field :VOL%>
+</div>
+
+<div class= "field">
+	<%=f.label :No%>
+	<%=f.text_field :No%>
+	
+<div class="field">
+	<%=f.label :Genre%>
+	<%=f.text_field :Genre%>
+
+<div class= "field">
+	<%=f.label :Web_Address%>
+	<%=f.text_field :Web_Address%>
+</div>
+
+<div class= "field">
+	<%=f.label :Entered_By%>
+	<%=f.text_field :Entered_By%>
+
+<div class= "field">
+	<%=f.label :Summary%>
+	<%=f.text_area :Summary%>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

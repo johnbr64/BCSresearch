@@ -1,0 +1,46 @@
+<%= form_for(publisher) do |f| %>
+  <% if publisher.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(publisher.errors.count, "error") %> prohibited this publisher from being saved:</h2>
+
+      <ul>
+      <% publisher.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+	<div class= "field">
+		<%=f.label:Publisher_Name%>
+		<%=f.text_field :Publisher_Name%>
+	</div>
+	
+	<div class= "field">
+		<%f.label :Street%>
+		<%f.text_field :Street%>
+	</div>
+	
+	<div class= "field">
+		<%=f.label :City%>
+		<%=f.text_field :City%>
+	</div>
+	
+	<div class= "field">
+		<%=f.label :State%>
+		<%=f.text_field :State%>
+		</div>
+	
+	<div class= "field">
+		<%=f.label:Zip%>
+		<%=f.text_field :Zip%>
+	</div>
+	
+	<div class= "field">
+		<%=f.label :Publisher_NameID%>
+		<%=f.text_field :Publisher_NameID%>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

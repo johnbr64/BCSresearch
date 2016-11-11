@@ -1,7 +1,29 @@
-<h1>Authors</h1>
+<p id="notice"><%= notice %></p>
 
-<ol>
-<% @authors.each do |author|%>
-	<li><%=author.L_Name%>, <%=author.F_Name%></li>
-	<%end%>
-</ol>
+<h2>Authors</h2>
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+	
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @authors.each do |author| %>
+	<tr>
+		<td><%=author.L_Name%></td>
+		<td><%=author.F_Name%></td>
+		<td><%=author.Full_Name%></td>
+	
+        <td><%= link_to 'Show', author %></td>
+        <td><%= link_to 'Edit', edit_author_path(author) %></td>
+        <td><%= link_to 'Destroy', author, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Author', new_author_path %>
