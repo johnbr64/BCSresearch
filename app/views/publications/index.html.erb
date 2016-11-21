@@ -7,7 +7,8 @@
     <tr>
 		<td><h2>Title</h2></td>
 		<td><h2>Author</h2></td>
-		<td><h2>Pub. Date</h2></td>
+		<td><h2>Publisher</h2></td>
+		<td><h2>Pub.Date</h2></td>
     </tr>
   </thead>
 
@@ -15,9 +16,12 @@
     <% @publications.each do |publication| %>
       <tr>
 		<td><%=publication.Pub_Title%></td>
-		<td><%=publication.Author_Name%></td>
+		<td><%=publication.authors.Full_Name%></td>
+		<td><%=publication.publisher.Publisher_Name%>
 		<td><%=publication.Pub_Date%></td>
-			
+		<td><%=publication.category_id%></td>
+		<td><%=publication.p_type_id%></td>
+				
         <td><%= link_to 'Show', publication %></td>
         <td><%= link_to 'Edit', edit_publication_path(publication) %></td>
         <td><%= link_to 'Destroy', publication, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -28,4 +32,5 @@
 
 <br>
 
-<%= link_to 'New Publication', new_publication_path %>
+<%= link_to 'New Publication', new_publication_path %> |
+<%= link_to 'Home', root_path %>

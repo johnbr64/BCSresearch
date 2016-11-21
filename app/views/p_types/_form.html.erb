@@ -1,0 +1,22 @@
+<%= form_for(p_type) do |f| %>
+  <% if p_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(p_type.errors.count, "error") %> prohibited this p_type from being saved:</h2>
+
+      <ul>
+      <% p_type.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Publication_Type %>
+    <%= f.text_field :pub_type %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -11,37 +11,22 @@
     </div>
   <% end %>
 
-<div class= "field">
-	<%=f.label :id%>
-	<%=f.text_field :id%> 
-</div><br />
 
 <div class= "field">		
 	<%=f.label :Title%>
 	<%=f.text_field :Pub_Title%>
 </div><br />
 
-<div class "field">
 	
 <div class "field">
-	<%=f.label :Author_ID%>
-	<%=f.number_field :Author_ID%>
-</div><br />
-
-<div class="field">
 	<%=f.label :Author%>
-	<%=f.text_field :Author_Name%>
+	<%=collection_select(:publication, :Author_ID, Author.order(:L_Name), :id, :L_Name,{},{:multiple => false})%>
 </div><br />
 
 <div class="field">
-	<%=f.label :Publisher_ID%>
-	<%=f.number_field :Publisher_ID%>
-</div><br />	
-
-<div class= "field">
 	<%=f.label :Publisher%>
-	<%=f.text_field :Publisher_Name%>
-</div><br />
+	<%=collection_select(:publication, :Publisher_ID, Publisher.order(:Publisher_Name), :id, :Publisher_Name, {},{:multiple => false})%>
+</div><br />	
 
 <div class= "field">
 	<%=f.label :Publication_Date%>
@@ -49,12 +34,12 @@
 </div><br />
 
 <div class="field">
-	<%=f.label :Category_ID%>
+	<%=f.label :Category%>
 	<%=collection_select(:publication, :category_id, Category.order(:category), :id, :category, {},{:multiple => false})%>
 </div><br />
-	
-<div class= "field">
-	<%=f.label :Type%>
+
+<div class="field">
+	<%f.label :Type%>
 	<%=collection_select(:publication, :p_type_id, PType.order(:pub_type), :id, :pub_type, {}, {:multiple => false})%>
 </div><br />
 
@@ -68,6 +53,11 @@
 	<%=f.text_field :No%>
 </div><br />
 	
+<div class="field">
+	<%=f.label :Genre%>
+	<%=f.text_field :Genre%>
+</div><br />
+
 <div class= "field">
 	<%=f.label :Web_Address%>
 	<%=f.text_field :Web_Address%>

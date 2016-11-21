@@ -1,0 +1,1 @@
+json.array! @p_types, partial: 'p_types/pub_type', as: :p_type

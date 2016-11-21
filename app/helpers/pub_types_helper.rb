@@ -1,0 +1,2 @@
+module PubTypesHelper
+end

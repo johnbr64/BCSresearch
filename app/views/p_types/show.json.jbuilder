@@ -1,0 +1,1 @@
+json.partial! "p_types/pub_type", p_type: @p_type

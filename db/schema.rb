@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161105214834) do
+ActiveRecord::Schema.define(version: 20161120201125) do
 
   create_table "Authors", primary_key: "Author_ID", force: :cascade, options: "ENGINE=MyISAM DEFAULT CHARSET=latin1" do |t|
     t.string "L_Name",    limit: 30
@@ -31,21 +31,6 @@ ActiveRecord::Schema.define(version: 20161105214834) do
     t.string "Pub_Type", limit: 30
   end
 
-  create_table "Publications", primary_key: "Pub_ID", force: :cascade, options: "ENGINE=MyISAM DEFAULT CHARSET=latin1" do |t|
-    t.string  "Pub_Date",       limit: 10
-    t.string  "Pub_Title",      limit: 120
-    t.binary  "Summary",        limit: 65535
-    t.string  "VOL",            limit: 5
-    t.integer "No",                           default: "", null:false                          
-    t.string  "Web_Address",    limit: 30
-    t.string  "Author_Name",    limit: 30
-    t.string  "Genre",          limit: 30
-    t.string  "Publisher_Name", limit: 35
-    t.string  "Pub_TypeR",      limit: 30
-    t.string  "Web_AddressR",   limit: 120,   default: "", null: false
-    t.string  "Entered_By",     limit: 25,    default: "", null: false
-  end
-
   create_table "Publishers", primary_key: "Publisher_ID", force: :cascade, options: "ENGINE=MyISAM DEFAULT CHARSET=latin1" do |t|
     t.string "Publisher_Name",   limit: 30
     t.string "Street",           limit: 30
@@ -56,7 +41,38 @@ ActiveRecord::Schema.define(version: 20161105214834) do
     t.string "Publisher_NameID", limit: 35
   end
 
+  create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "category"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "database_structures", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  end
+
+  create_table "p_types", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "pub_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "publications", primary_key: "Pub_ID", force: :cascade, options: "ENGINE=MyISAM DEFAULT CHARSET=latin1" do |t|
+    t.string  "Pub_Date",       limit: 10
+    t.string  "Pub_Title",      limit: 120
+    t.binary  "Summary",        limit: 65535
+    t.string  "VOL",            limit: 5
+    t.integer "No"
+    t.string  "Web_Address",    limit: 30
+    t.string  "Author_Name",    limit: 30
+    t.string  "Genre",          limit: 30
+    t.string  "Publisher_Name", limit: 35
+    t.string  "Pub_TypeR",      limit: 30
+    t.string  "Web_AddressR",   limit: 120,   default: "", null: false
+    t.string  "Entered_By",     limit: 25,    default: "", null: false
+    t.integer "Author_ID"
+    t.integer "Publisher_ID"
+    t.integer "category_id"
+    t.integer "p_type_id"
   end
 
 end

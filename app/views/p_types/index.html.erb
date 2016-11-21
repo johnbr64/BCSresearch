@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Publication Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @p_types.each do |p_type| %>
+      <tr>
+        <td><%= p_type.pub_type %></td>
+        <td><%= link_to 'Show', p_type %></td>
+        <td><%= link_to 'Edit', edit_p_type_path(p_type) %></td>
+        <td><%= link_to 'Destroy', p_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New P Type', new_p_type_path %>
