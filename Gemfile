@@ -50,3 +50,15 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Add pagination
 gem 'will_paginate', '~> 3.0.3'
+
+# add devise
+gem 'devise', '~> 4.2.0' 
+
+#Add responders
+gem 'responders', '~>2.0'
+
+#Add devise_token_auth
+gem 'devise_token_auth'
+
+#Add gem omniauth
+gem 'omniauth'
