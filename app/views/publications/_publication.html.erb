@@ -21,8 +21,7 @@
 <div class "field">
 	<%=f.label :Author%>
 	<%=collection_select(:publication, :Author_ID, Author.order(:L_Name), :id, :L_Name,{},{:multiple => false})%>
-</div><br />
-
+	
 <div class="field">
 	<%=f.label :Publisher%>
 	<%=collection_select(:publication, :Publisher_ID, Publisher.order(:Publisher_Name), :id, :Publisher_Name, {},{:multiple => false})%>

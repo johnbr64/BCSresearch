@@ -15,14 +15,13 @@
   <tbody>
     <% @publications.each do |publication| %>
       <tr>
-		<td><%=publication.Pub_Title%></td>
+		<td><%=link_to publication.Pub_Title, publication%></td>
 		<td><%=publication.authors.Full_Name%></td>
 		<td><%=publication.publisher.Publisher_Name%>
 		<td><%=publication.Pub_Date%></td>
-		<td><%=publication.category_id%></td>
-		<td><%=publication.p_type_id%></td>
+		
 				
-        <td><%= link_to 'Show', publication %></td>
+        
         <td><%= link_to 'Edit', edit_publication_path(publication) %></td>
         <td><%= link_to 'Destroy', publication, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

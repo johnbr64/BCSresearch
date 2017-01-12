@@ -12,11 +12,11 @@
   <tbody>
     <% @authors.each do |author| %>
 	<tr>
-		<td><%=author.L_Name%></td>
+		<td><%=link_to author.L_Name, author%></td>
 		<td><%=author.F_Name%></td>
 		<td><%=author.Full_Name%></td>
 	
-        <td><%= link_to 'Show', author %></td>
+        
         <td><%= link_to 'Edit', edit_author_path(author) %></td>
         <td><%= link_to 'Destroy', author, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -28,4 +28,4 @@
 
 <%= link_to 'New Author', new_author_path %> |
 <%= link_to 'Home', root_path %><br />
-<b><%= link_to 'Sign Out', destroy_user_session_path, method: :delete%></b>
+

@@ -1,7 +1,7 @@
 <h1><c>Publication</c></h1>
 
-<b>ID: </b><%=@publication.id%>&nbsp;&nbsp;<b>Title: </b><%=@publication.Pub_Title%>&nbsp;&nbsp;<b>Author: </b><%=@publication.Author_Name%><br /><br />
-<b>Publisher: </b><%=@publication.Publisher_Name%>&nbsp;&nbsp;<b>Date </b><%=@publication.Pub_Date%>&nbsp;&nbsp;<b>Volume: </b><%=@publication.VOL%>&nbsp;&nbsp; <b>No.: </b><%=@publication.No%><br /><br />
+<b>ID: </b><%=@publication.id%>&nbsp;&nbsp;<b>Title: </b><%=@publication.Pub_Title%>&nbsp;&nbsp;<b>Author: </b><%=@publication.authors.Full_Name%><br /><br />
+<b>Publisher: </b><%=@publication.publisher.Publisher_Name%>&nbsp;&nbsp;<b>Date </b><%=@publication.Pub_Date%>&nbsp;&nbsp;<b>Volume: </b><%=@publication.VOL%>&nbsp;&nbsp; <b>No.: </b><%=@publication.No%><br /><br />
 <b>CategoryID: </b><%=@publication.category_id%>&nbsp; <%=@publication.category.category%>&nbsp;&nbsp;<b>TypeID: </b> <%=@publication.p_type_id%>&nbsp;<%=@publication.p_type.pub_type%>&nbsp;&nbsp;<b>Web_Address: </b><%=@publication.Web_Address%>&nbsp;&nbsp;<b>Entered_By: </b><%=@publication.Entered_By%>
 <br />
 <br />
@@ -12,3 +12,4 @@
 <br /><br />
 <%= link_to 'Edit', edit_publication_path(@publication) %> |
 <%= link_to 'Back', publications_path %>
+
