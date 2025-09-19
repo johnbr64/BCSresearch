@@ -1,3 +1,4 @@
 class Publisher < ApplicationRecord
-  has_many :publications
+  self.table_name  = "Publishers"
+  self.primary_key = "Publisher_ID"
 end

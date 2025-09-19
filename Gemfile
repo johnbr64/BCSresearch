@@ -1,64 +1,56 @@
-source 'https://rubygems.org'
 
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
-# Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.3.18', '< 0.5'
-# Use Puma as the app server
-gem 'puma', '~> 3.0'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+source "https://rubygems.org"
 
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 3.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+ruby "3.2.4"
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+# Core
+gem "rails",   "~> 6.1.7"
+
+# Server & DB
+gem "puma",    "~> 5.6"
+gem "mysql2",  "~> 0.5"
+
+# Assets / JS / CSS
+gem "sassc-rails", "~> 2.1"   # replaces sass-rails (EOL)
+gem "terser",      "~> 1.1"   # replaces uglifier (uses ExecJS runtime)
+gem "execjs"                     # let ExecJS pick Node if present
+
+# Front-end libs (keep if used)
+gem "jquery-rails"
+gem "turbolinks", "~> 5"
+gem "jbuilder",   "~> 2.11"
+gem "bootstrap",  "~> 4.1.3"
+gem "coffee-rails", "~> 4.2"    # only if you still have .coffee files
+
+# Auth
+gem "devise", "~> 4.9"
+# If you use token auth:
+gem "devise_token_auth", "~> 1.2"
+# If you use OmniAuth providers:
+gem "omniauth", "~> 2.1"
+gem "omniauth-rails_csrf_protection", "~> 1.0"
+
+# Responders (only if you actually use respond_with / responders)
+gem "responders", "~> 3.1"
+
+# Windows tzdata (safe to leave)
+gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
+
+# Capistrano (optional; keep if you use)
+gem "capistrano-rails", group: :development
+gem "capistrano-ext"
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
+  gem "byebug", "~> 11.1"
 end
 
 group :development do
-  # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console'
-  gem 'listen', '~> 3.0.5'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'yaml_db'
+  gem "web-console", "~> 4.2"
+  gem "listen", "~> 3.9"
+  gem "ffi", ">= 1.15.5"             # avoids old ffi build errors on macOS
+  # If you rely on Spring, keep these modern versions; otherwise remove both:
+  # gem "spring", "~> 4.4"
+  # gem "spring-watcher-listen", "~> 2.1"
+  gem "yaml_db"
 end
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-# Add pagination
-gem 'will_paginate', '~> 3.0.3'
-
-# add devise
-gem 'devise', '~> 4.2.0' 
-
-#Add responders
-gem 'responders', '~>2.0'
-
-#Add devise_token_auth
-gem 'devise_token_auth'
-
-#Add gem omniauth
-gem 'omniauth'

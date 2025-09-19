@@ -1,0 +1,25 @@
+current directory: /Users/cciu/research/vendor/bundle /ruby/3.2.0/gems/date-3.4.1/ext/date
+/Users/cciu/.rbenv/versions/3.2.4/bin/ruby extconf.rb
+checking for rb_category_warn()... yes
+checking for timezone in time.h with  -Werror... yes
+checking for altzone in time.h with  -Werror... no
+creating Makefile
+
+current directory: /Users/cciu/research/vendor/bundle /ruby/3.2.0/gems/date-3.4.1/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20250913-83245-1b3pbb sitelibdir\=./.gem.20250913-83245-1b3pbb clean
+
+current directory: /Users/cciu/research/vendor/bundle /ruby/3.2.0/gems/date-3.4.1/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20250913-83245-1b3pbb sitelibdir\=./.gem.20250913-83245-1b3pbb
+compiling date_core.c
+compiling date_parse.c
+compiling date_strftime.c
+compiling date_strptime.c
+linking shared-object date_core.bundle
+ld: warning: -undefined dynamic_lookup may not work with chained fixups
+
+current directory: /Users/cciu/research/vendor/bundle /ruby/3.2.0/gems/date-3.4.1/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20250913-83245-1b3pbb sitelibdir\=./.gem.20250913-83245-1b3pbb install
+/usr/bin/install -c -m 0755 date_core.bundle ./.gem.20250913-83245-1b3pbb
+
+current directory: /Users/cciu/research/vendor/bundle /ruby/3.2.0/gems/date-3.4.1/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20250913-83245-1b3pbb sitelibdir\=./.gem.20250913-83245-1b3pbb clean
