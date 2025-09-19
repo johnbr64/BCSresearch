@@ -10,12 +10,12 @@
 #   http://dev.mysql.com/doc/refman/5.7/en/old-client.html
 #
 default: &default
+  host: 127.0.0.1
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: root
+  username: research
   password: m45+3R4a1@5k@
-  socket: /tmp/mysql.sock
 
 development:
   <<: *default

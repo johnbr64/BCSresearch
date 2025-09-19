@@ -1,0 +1,19 @@
+current directory: /Users/cciu/research/vendor/bundle /ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+/Users/cciu/.rbenv/versions/3.2.4/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/cciu/research/vendor/bundle /ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250913-83245-b6lxq1 sitelibdir\=./.gem.20250913-83245-b6lxq1 clean
+
+current directory: /Users/cciu/research/vendor/bundle /ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250913-83245-b6lxq1 sitelibdir\=./.gem.20250913-83245-b6lxq1
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+ld: warning: -undefined dynamic_lookup may not work with chained fixups
+
+current directory: /Users/cciu/research/vendor/bundle /ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250913-83245-b6lxq1 sitelibdir\=./.gem.20250913-83245-b6lxq1 install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20250913-83245-b6lxq1/racc
+
+current directory: /Users/cciu/research/vendor/bundle /ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250913-83245-b6lxq1 sitelibdir\=./.gem.20250913-83245-b6lxq1 clean

@@ -1,5 +1,4 @@
 class Author < ApplicationRecord
-  
-  has_many :publications
-
+  self.table_name  = 'Authors'
+  self.primary_key = 'Author_ID'
 end
